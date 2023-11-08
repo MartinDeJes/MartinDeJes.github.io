@@ -1,0 +1,93 @@
+.layout {
+    width: 100%;
+    display: grid;
+    grid:
+        "header header header" auto
+        "leftSide body rightSide" 1fr
+        "footer footer footer" auto
+        / auto 1fr auto;
+    gap: 8px;
+}
+
+.header {
+    grid-area: header;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    background-color:#1572E8;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.leftSide {
+    grid-area: leftSide;
+    border: none;
+    background-color:#1572E8;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.body {
+    grid-area: body;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    
+}
+article {
+    margin-left: 10px;
+    padding: 1px;
+}
+iframe {
+    border: none;
+    width: 100%;
+    height: 550px;
+}
+
+.rightSide {
+    grid-area: rightSide;
+    border: 1px solid green;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color:#1572E8;
+    border: 1px solid purple;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.leftSide ul a {
+    color: white;        
+    text-decoration: none; 
+}
+
+
+@media (max-width: 768px) {
+    /* Aplicar estilos diferentes cuando el ancho de la pantalla sea igual o inferior a 768px */
+    .layout {
+        grid-template:
+            "header" auto
+            "leftSide" auto
+            "body" auto
+            "rightSide" auto
+            "footer" auto;
+    }
+}
+
+#logo {
+    width: 70px; 
+    left: 10px;
+}
+
+h1 {
+    margin: 0;
+}
